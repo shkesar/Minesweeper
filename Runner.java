@@ -17,7 +17,7 @@ class Runner {
         blast = restart = exit = false;
 
         do {
-          mineField.display();
+          mineField.displayWithBorder();
           Command cmd;
 
           try {

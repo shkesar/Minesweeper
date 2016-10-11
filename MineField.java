@@ -175,6 +175,25 @@ class MineField {
     }
   }
 
+  public void displayWithBorder() {
+    // Top index
+    System.out.print("  ");
+    for (int i = 0; i < MineField.WIDTH; i++) System.out.print(i + " ");
+    System.out.println();
+
+    for (int i = 0; i < MineField.WIDTH; i++) {
+      // left index
+      System.out.print(i + " ");
+      for (int j = 0; j < MineField.HEIGHT; j++) {
+        if (field[i][j].open == true)
+          System.out.print(field[i][j].toString() + " ");
+        else
+          System.out.print("* ");
+      }
+      System.out.println("");
+    }
+  }
+
   private int nextRandomNumber() {
     return random.nextInt(32768);
   }
